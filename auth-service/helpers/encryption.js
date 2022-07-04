@@ -19,15 +19,6 @@ exportFuns.getJwtEncryption = (dataObj = {}, expiresIn = process.env.JWT_EXPIRE_
     return exportFuns.getEncryptedToken(generatedToken);
 };
 
-// exportFuns.getJwtDecryption = (token) => {
-//     try {
-//         const authToken = exportFuns.getDecryptedToken(token);
-//         return jwt.verify(authToken, process.env.JWT_SECRET_KEY)
-//     } catch (err) {
-//         throw err.message;
-//     }
-// };
-
 exportFuns.getEncryptedToken = (generatedToken) => {
     try {
         return encryptor.encrypt(generatedToken);
@@ -35,13 +26,5 @@ exportFuns.getEncryptedToken = (generatedToken) => {
         throw err.message;
     }
 };
-
-// exportFuns.getDecryptedToken = (token) => {
-//     try {
-//         return encryptor.decrypt(token);
-//     } catch (err) {
-//         throw err.message;
-//     }
-// };
 
 module.exports = exportFuns;
