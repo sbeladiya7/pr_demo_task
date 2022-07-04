@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "fb44c5af-e536-41ab-a851-ad69955eac84",
+		"name": "pr_demo_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19374443"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user1\",\r\n    \"fullname\":\"test user1\",\r\n    \"email\":\"testuser1@gmail.com\",\r\n    \"password\":\"testuser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user1\",\r\n    \"password\":\"testuser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "d4cc2d99fe9de9e7336c17f358d3a6a5f5040438a3f4aa090c699a8e52c52dac1ad680f43cb89de7547f7ca108e44c61Xe+ihgyPlEuhKZNTeUBiOzReCsJ5GbgyECdc5zPGvVWFZvjlEDdOrsNpAfNAitM7kElziCCmclx99Q4gtZ/xMLIvMOjap025q/NjrTaH4L6mSrZgGiFU0jTE8168zcFhGF/Wu1inJFwehJI58Esnqo7hPOa11QnPM5CmE0AeP+O9SkiyzKi2R7xEL2+lW11pRHPh6EIjaOdruG4wvHm66LJCUFIYlT7d7gjejKJbq9WawcuLyPDGjRHGq5NPSFly6H/faoc+GZfSINawnL3JuypugfaHDSl+cQrw7gwb1rqUxUrxiSqU0lwELwrlYTBP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
